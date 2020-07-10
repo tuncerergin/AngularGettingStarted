@@ -1,3 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c33bb87-ed33-475d-9338-2cbe00f7f431/deploy-status)](https://app.netlify.com/sites/angulargettingstarted/deploys)
+
+
+[Hosted on Netlify](https://angulargettingstarted.netlify.app/)
+
 # AngularGettingStarted
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
