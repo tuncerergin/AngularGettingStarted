@@ -7,7 +7,7 @@ import {Recipe} from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  recipies: Recipe[] = [
+  recipes: Recipe[] = [
     new Recipe('A Test Recipe', 'This is a test recipe', 'https://diethood.com/wp-content/uploads/2019/07/Whole-Roast-Chicken.jpg')
   ];
 
