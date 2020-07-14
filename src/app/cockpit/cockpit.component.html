@@ -8,7 +8,11 @@
       class="form-control"
       type="text">
     <label>Server Content</label>
-    <input type="text" class="form-control" [(ngModel)]="newServerContent">
+    <!--    <input type="text" class="form-control" [(ngModel)]="newServerContent">-->
+    <input
+      #serverContentInput
+      class="form-control"
+      type="text">
     <br>
     <button
       class="btn btn-success mr-2"
