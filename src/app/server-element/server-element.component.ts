@@ -4,6 +4,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
+  ContentChild,
   DoCheck,
   ElementRef,
   Input,
@@ -15,6 +16,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 
+// tslint:disable-next-line:no-conflicting-lifecycle
 @Component({
   selector: 'app-server-element',
   templateUrl: './server-element.component.html',
@@ -23,9 +25,10 @@ import {
 })
 export class ServerElementComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit,
   AfterViewChecked, OnDestroy {
+  // tslint:disable-next-line:no-input-rename
   @Input('srvElement') element: { type: string, name: string, content: string };
   @ViewChild('heading', {static: true}) header: ElementRef;
-
+  @ContentChild('contentParagraph', {static: true}) paragraph: ElementRef;
   constructor() {
     console.log('constructor called');
   }
@@ -38,6 +41,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
   ngOnInit(): void {
     console.log('ngOnInit called');
     console.log('ngOnInit -> Text Content: ' + this.header.nativeElement.textContent);
+    console.log('ngOnInit -> Paragraph Content: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngDoCheck(): void {
@@ -46,6 +50,7 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck, After
 
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called');
+    console.log('ngAfterContentInit -> Paragraph Content: ' + this.paragraph.nativeElement.textContent);
   }
 
   ngAfterContentChecked(): void {
